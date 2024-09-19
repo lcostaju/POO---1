@@ -21,7 +21,7 @@ public class App {
     public static void restricao(){
         System.out.println("Valor digitado não é inteiro");
     }
-    //3 - função que não retorna valor e tem parametros
+    //3 - função que não retorna valor e tem parametro
     public static void exibe(boolean par){
         if (par) {
             System.out.println("O numero digitado é par");
