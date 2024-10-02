@@ -85,14 +85,14 @@ public class JogoVelha {
 
         for (int i = 0; i < mAtual.length; i++) {
             for (int j = 0; j < mAtual[i].length; j++) {
-                System.out.print(" "+mAtual[i][j]+" ");
+                System.out.print(mAtual[i][j]);
             }
             System.out.println();
         }
         System.out.println();
         for (int i = 0; i < mPosicao.length; i++) {
             for (int j = 0; j < mPosicao[i].length; j++) {
-                System.out.print(" "+mPosicao[i][j]+" ");
+                System.out.print(mPosicao[i][j]);
             }
             System.out.println();
         }
