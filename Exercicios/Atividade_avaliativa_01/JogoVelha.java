@@ -3,7 +3,12 @@ package Exercicios.Atividade_avaliativa_01;
 import java.util.Scanner;
 
 public class JogoVelha {
-    public static char mAtual[][] = new char[3][3];
+    //public static char mAtual[][] = new char[3][3];
+    public static char mAtual[][] ={
+        {' ',' ',' '},
+        {' ',' ',' '},
+        {' ',' ',' '}
+    };
     public static int mPosicao[][] = {
             { 1, 2, 3 },
             { 4, 5, 6 },
@@ -85,14 +90,14 @@ public class JogoVelha {
 
         for (int i = 0; i < mAtual.length; i++) {
             for (int j = 0; j < mAtual[i].length; j++) {
-                System.out.print(mAtual[i][j]);
+                System.out.print(" "+mAtual[i][j]+" ");
             }
             System.out.println();
         }
         System.out.println();
         for (int i = 0; i < mPosicao.length; i++) {
             for (int j = 0; j < mPosicao[i].length; j++) {
-                System.out.print(mPosicao[i][j]);
+                System.out.print(" "+mPosicao[i][j]+" ");
             }
             System.out.println();
         }
@@ -113,39 +118,39 @@ public class JogoVelha {
         } else {
             switch (posicao) {
                 case 1:
-                    if (mAtual[0][0] != '\u0000')
+                    if (mAtual[0][0] != ' ')
                         return false;
                     break;
                 case 2:
-                    if (mAtual[0][1] != '\u0000')
+                    if (mAtual[0][1] != ' ')
                         return false;
                     break;
                 case 3:
-                    if (mAtual[0][2] != '\u0000')
+                    if (mAtual[0][2] != ' ')
                         return false;
                     break;
                 case 4:
-                    if (mAtual[1][0] != '\u0000')
+                    if (mAtual[1][0] != ' ')
                         return false;
                     break;
                 case 5:
-                    if (mAtual[1][1] != '\u0000')
+                    if (mAtual[1][1] != ' ')
                         return false;
                     break;
                 case 6:
-                    if (mAtual[1][2] != '\u0000')
+                    if (mAtual[1][2] != ' ')
                         return false;
                     break;
                 case 7:
-                    if (mAtual[2][0] != '\u0000')
+                    if (mAtual[2][0] != ' ')
                         return false;
                     break;
                 case 8:
-                    if (mAtual[2][1] != '\u0000')
+                    if (mAtual[2][1] != ' ')
                         return false;
                     break;
                 case 9:
-                    if (mAtual[2][2] != '\u0000')
+                    if (mAtual[2][2] != ' ')
                         return false;
                     break;
                 default:                
@@ -155,7 +160,7 @@ public class JogoVelha {
             // for (int i = 0; i < mPosicao.length; i++) {
             // for (int j = 0; j < mPosicao[i].length; j++) {
             // if (mPosicao[i][j]==posicao) {
-            // if(mAtual[i][j] == '\u0000')
+            // if(mAtual[i][j] == ' ')
             // retorno = true;
             // else
             // retorno = false;
@@ -179,7 +184,7 @@ public class JogoVelha {
     // Verifica se todas as células estão preenchidas
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
-            if (mAtual[i][j] == '\u0000') {
+            if (mAtual[i][j] == ' ') {
                 return false; // Se houver uma célula vazia, não é empate
             }
         }
@@ -192,25 +197,25 @@ public class JogoVelha {
     public static boolean vitoria() {
          // Verifica as linhas
          for (int i = 0; i < 3; i++) {
-            if (mAtual[i][0] == mAtual[i][1] && mAtual[i][1] == mAtual[i][2] && mAtual[i][0] != '\u0000') {
+            if (mAtual[i][0] == mAtual[i][1] && mAtual[i][1] == mAtual[i][2] && mAtual[i][0] != ' ') {
                 return true;
             }
         }
         
         // Verifica as colunas
         for (int i = 0; i < 3; i++) {
-            if (mAtual[0][i] == mAtual[1][i] && mAtual[1][i] == mAtual[2][i] && mAtual[0][i] != '\u0000') {
+            if (mAtual[0][i] == mAtual[1][i] && mAtual[1][i] == mAtual[2][i] && mAtual[0][i] != ' ') {
                 return true;
             }
         }
         
         // Verifica a diagonal principal
-        if (mAtual[0][0] == mAtual[1][1] && mAtual[1][1] == mAtual[2][2] && mAtual[0][0] != '\u0000') {
+        if (mAtual[0][0] == mAtual[1][1] && mAtual[1][1] == mAtual[2][2] && mAtual[0][0] != ' ') {
             return true;
         }
         
         // Verifica a diagonal secundária
-        if (mAtual[0][2] == mAtual[1][1] && mAtual[1][1] == mAtual[2][0] && mAtual[0][2] != '\u0000') {
+        if (mAtual[0][2] == mAtual[1][1] && mAtual[1][1] == mAtual[2][0] && mAtual[0][2] != ' ') {
             return true;
         }
         
