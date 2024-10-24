@@ -15,6 +15,6 @@ public class Formacao {
     }
 
     public String exibe(){
-        return "Nivel: "+nivel+" Concluido: "+concluido+" Instituicao: "+instituicao+" Ano:"+ano;
+        return "Nivel: "+nivel+" Concluido: "+(concluido?"Sim":"Não")+" Instituicao: "+instituicao+" Ano:"+ano;
     }
 }

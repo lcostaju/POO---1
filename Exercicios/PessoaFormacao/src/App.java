@@ -28,17 +28,20 @@ public class App {
     // metodo para ler formação
     public static Formacao leFormacao() {
         String nivel;
-        boolean concluido;
+        boolean concluido = false;
         String instituicao;
         int ano = 2024;
+        char conclusao;
 
         Scanner s = new Scanner(System.in);
         System.out.println("Digite os dados de formação");
         System.out.print("Digite o nivel:");
         nivel = s.next();
         System.out.println();
-        System.out.print("Digite se foi concluido(true ou false):");
-        concluido = s.nextBoolean();
+        System.out.print("Digite se foi concluido(s ou n):");
+        conclusao = s.next().charAt(0);
+        if(conclusao == 's')
+        concluido = true;
         System.out.println();
         System.out.print("Digite a Instituição: ");
         instituicao = s.next();
