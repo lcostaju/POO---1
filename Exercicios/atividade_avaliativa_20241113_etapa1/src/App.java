@@ -37,6 +37,7 @@ public class App {
         Retas reta;
         char repete = 's';
         boolean validCoor = true;
+        int cont = 0;
 
             do{
                 reta = leCoordenada();
@@ -47,7 +48,9 @@ public class App {
                     reta = leCoordenada();
                     validCoor = valida(reta.getX1(), reta.getY1(),reta.getX2(),reta.getY2());
                 }
-            System.out.println(reta.exibe());    
+            System.out.println(reta.exibe());
+            cont ++;
+            System.out.println("Retas calculadas: "+cont);  
             System.out.println("Deseja repetir o calculo? Sim(s) Não(Qualquer tecla)");
                 repete = s.next().charAt(0);
             }while(repete == 's' || repete == 'S');
